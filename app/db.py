@@ -53,17 +53,3 @@ def insert_into_db(conn,data):
     conn.commit()
     cursor.close()
 
-#
-# d = {'weapon_id': 'W-001',
-#  'weapon_name': 'Falcon-7',
-#   'weapon_type': 'Missile',
-#    'range_km': 15,
-#     'weight_kg': 85.5,
-#      'manufacturer': 'Orion Systems',
-#      'origin_country': 'Iran',
-#       'storage_location': 'Warehouse-A'
-#       , 'year_estimated': 2016,
-#        'risk_level': 'low'}
-#
-#
-# insert_into_db(c,[d])
