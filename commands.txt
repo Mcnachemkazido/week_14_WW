@@ -1,0 +1,8 @@
+docker build -t menachemkazido/tst-api .
+docker push menachemkazido/tst-api
+ oc apply -f '.\ mysql-statefulset.yaml'
+oc apply -f .\mysql-service.yaml
+ oc apply -f .\api-deployment.yaml
+oc apply -f .\api-service.yaml
+oc expose service/api-service
+ oc get route

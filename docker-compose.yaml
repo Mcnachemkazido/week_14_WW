@@ -1,0 +1,17 @@
+services:
+  api:
+    build: ./app
+    ports:
+      - "8000:8000"
+    container_name: new-api
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASS: menachem
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: menachem
+
